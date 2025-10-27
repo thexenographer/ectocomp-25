@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap');
+
+html, body {
+	min-height: 100%;
+}
+
+
+body {
+  /* Remove default styles */
+  font-size: 120%;
+  /* Used to center the box */
+  text-align: center;
+  background-image: linear-gradient(rgba(118, 214, 255, 0.922), rgba(118, 214, 255, 0.922));
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
+  background-size: auto, cover;
+}
+
+
+input, select, textarea {
+	background-color: floralwhite;
+  	border: 2px solid black;
+  	color: black;
+}
+
+input:hover, select:hover, textarea:hover {
+	background-color: lightyellow;
+    border: 2px solid black;
+}
+	
+input:focus, select:focus, textarea:focus {
+  background-color: lightyellow;
+  border: 2px solid black;
+}
+
+html[data-outlines] input:focus,
+input:hover,
+html[data-outlines] select:focus,
+select:hover,
+html[data-outlines] textarea:focus,
+textarea:hover {
+	background-color: lightyellow;
+}
+
+  #passages {
+  /* Box background */
+  background-color: lightyellow;
+	
+ /* Border */
+  border: 5px solid lightyellow;
+
+  /* Rounded corners */
+  border-radius: 1em;
+
+  /* Box width */
+  width: 70%;
+
+  /* Center the box */
+  display: inline-block;
+  min-height: 40%;
+  margin:auto;
+  margin-top: 7%;
+	margin-bottom: 5%;
+  padding: 0px;
+}
+
+.passage {
+  margin: 0px;
+  /* Inner margin within the box */
+  padding: 2em;
+
+  /* Text formatting */
+  color: black;
+  font-size: 100%;
+  font-family: Verdana, sans-serif;
+  text-align: left;
+  line-height: 115%;
+}
+
+.passage button {
+ background-color: #8fd4ff;
+ color: black;
+ border: 1px solid black;
+}
+
+/* Links */
+a {
+  color: rgba(0, 47, 255, 0.922);
+  font-weight: bold;
+}
+a:hover {
+  color: rgba(51, 0, 253, 0.922);
+  font-weight: bold;
+}
+
+/* dark mode*/
+
+.passage.dark {
+  margin: 0px;
+  /* Inner margin within the box */
+  padding: 2em;
+
+  /* Text formatting */
+  color: lightgoldenrodyellow;
+  font-size: 100%;
+  font-family: Georgia, serif;
+  text-align: left;
+  line-height: 115%;
+}
+
+#passages.dark {
+  /* Box background */
+  background-color: rgb(62, 45, 0);
+	
+ /* Border */
+  border: 5px solid rgb(62, 45, 0);
+
+  /* Rounded corners */
+  border-radius: 1em;
+
+  /* Box width */
+  width: 70%;
+
+  /* Center the box */
+  display: inline-block;
+  min-height: 40%;
+  margin:auto;
+  margin-top: 7%;
+	margin-bottom: 5%;
+  padding: 0px;
+}
+
+body.dark {
+  background-image: url("https://gist.githack.com/thexenographer/9c2f1b53e97b3cd9b7453b34d4c85c1a/raw/4f552d7939c9f52137c06494c183d275734a16ec/theatermasks3.svg"), linear-gradient(rgba(0, 42, 16, 0.922), rgba(0, 42, 16, 0.922));
+}
+
+body.mel #passages.dark {
+  background-color: rgb(0, 50, 95);
+  border: 5px solid rgb(0, 50, 95);
+  color: aliceblue;
+
+}
+
+.dark a {
+  color: rgba(139, 232, 175, 0.922);
+  font-weight: bold;
+}
+
+.dark a:hover {
+  color: rgba(196, 255, 219, 0.922);
+  font-weight: bold;
+}
+
+a.dark {
+  color: rgba(139, 232, 175, 0.922);
+  font-weight: bold;
+}
+a:hover.dark {
+  color: rgba(196, 255, 219, 0.922);
+  font-weight: bold;
+}
+
+.passage.dark button {
+  background-color: rgb(90, 68, 12);
+  color: lightgoldenrodyellow;
+  border: 1px solid lightgoldenrodyellow;
+ }
+
+ input.dark {
+	background-color: rgb(90, 68, 12);
+  	border: 2px solid lightgoldenrodyellow;
+  	color: lightgoldenrodyellow;
+}
+
+input:hover.dark {
+	background-color: rgb(56, 42, 7);
+    border: 2px solid lightgoldenrodyellow;
+}
+	
+input:focus.dark {
+  background-color: rgb(56, 42, 7);
+  border: 2px solid lightgoldenrodyellow;
+}
+
+html[data-outlines] input:focus.dark,
+input:hover.dark,
+html[data-outlines] select:focus.dark,
+select:hover.dark,
+html[data-outlines] textarea:focus.dark,
+textarea:hover.dark {
+	background-color: rgb(56, 42, 7);
+}
+
+#dual.dark {
+  /*display: flex;*/
+  /*gap: 10px;*/
+}
+
+#left.dark {
+  /*flex: 0 0 50%;*/
+  background-color: rgb(62, 45, 0);
+  padding: 10px;
+  border: 5px lightyellow solid;
+  border-radius: 5px;
+  margin-bottom: 5%;
+}
+
+#right.dark {
+  /*flex: 1;*/
+  background-color: rgb(0, 50, 95);
+  padding: 10px;
+  border: 5px lightyellow solid;
+  border-radius: 5px;
+}
+
+/* Shrink the page when viewed on devices with a low screen width */
+@media screen and (max-width: 960px) {
+  .passage { font-size: 90%;}
+  .passage.dark { font-size: 90%;}
+  #passages { width: 80%; }
+  #passages.dark { width: 80%; }
+  body {background-size: 15%, cover;}
+}
+@media screen and (max-width: 840px) {
+  .passage {  font-size: 87.5%; }
+  .passage.dark {  font-size: 87.5%; }
+  #passages { width: 80%; }
+  #passages.dark { width: 80%; }
+  body {background-size: 15%, cover;}
+}
+
+@media screen and (max-width: 720px) {
+  .passage { font-size: 75%; }
+  .passage.dark { font-size: 75%; }
+  #passages { width: 90%; }
+  #passages.dark { width: 90%; }
+  body {background-size: 20%, cover;}
+}
+
+#ui-bar {
+	background-color: #FFD500;
+	border-right: 1px solid black;
+	text-align: center;
+  	color: black;
+    font-family: Georgia, serif;
+}
+#ui-bar a {
+	text-decoration: none;
+  	color: rgba(2, 96, 38, 0.922);
+}
+#ui-bar hr {
+	border-color: black;
+}
+#ui-bar-toggle,
+#ui-bar-history [id|="history"] {
+	font-size: 1.2em;
+	line-height: inherit;
+	color: black;
+	background-color: transparent;
+	border: 1px solid black;
+}
+
+#ui-bar-history [id|="history"]:hover {
+	background-color: #d0ae00;
+	border-color: black;
+}
+
+#story-title {
+	color: black;
+}
+
+#ui-bar-toggle:hover {
+	background-color: #d0ae00;
+  	border-color: black;
+}
+
+#ui-dialog-body {
+  color: rgba(2, 96, 38, 0.922);
+  background-color: #fffabf;
+ }
+
+#ui-dialog-titlebar {
+  color: rgba(2, 96, 38, 0.922);
+  background-color: #fffabf;
+ }
+
+#ui-dialog-title {
+  color: rgba(2, 96, 38, 0.922);
+  background-color: #fffabf;
+ }
+
+#menu li a {
+	display: block;
+	padding: 0.25em 0.75em;
+	border: 1px solid transparent;
+	color: black;
+	text-transform: uppercase;
+}
+
+#menu li a:hover {
+	background-color: #d0ae00;
+	border-color: black;
+}
+
+.error-view {
+	background-color: gainsboro;
+	color: black;
+}
+
+.error-source:not([hidden]) {
+	background-color: white;
+}
+
+html[data-debug-view] .debug {
+	background-color: aliceblue; 
+}
+
+html[data-debug-view] .debug.hidden,
+html[data-debug-view] .debug.hidden .debug {
+	background-color: gainsboro;
+}
+
+html[data-debug-view] .debug[data-name][data-type]:before,
+html[data-debug-view] .debug[data-name][data-type].nonvoid:after {
+	background-color: white;
+	font-family: monospace, monospace;
+	white-space: pre;
+
+}
+
+.hidehistory #ui-bar-history {
+	display: none;
+}

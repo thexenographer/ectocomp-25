@@ -1,0 +1,19 @@
+{
+    "twee3LanguageTools.storyformat.current": "sugarcube-2",
+    "spellright.language": [
+        "en"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext",
+        "twee3-sugarcube-2",
+        "html"
+    ],
+    "spellright.parserByClass": {
+        "twee3-sugarcube-2": {
+            "parser": "markdown"
+        }
+    },
+    "twee3LanguageTools.passage.list": true
+}

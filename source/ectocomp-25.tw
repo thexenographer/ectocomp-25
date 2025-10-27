@@ -1,0 +1,146 @@
+:: StoryData
+{
+    "ifid": "E4B11A6D-33EA-44D2-921B-8ADC41870641",
+    "format": "SugarCube",
+    "format-version": "2.37.3"
+}
+
+:: StoryTitle
+    every day i get emails
+
+:: StoryInit
+    <<run Config.passages.nobr = true;>>
+
+    <<set $print = false>>
+    <<set $tech = false>>
+    <<set $access = false>>
+    <<set $sales = false>>
+
+    <<set $task = "">>
+    <<set $recipient = "">>
+
+    <<set $return = "day1-1">>
+
+    <<set $absence = false>>
+
+    <<set $emails = 6>>
+
+:: Start
+    every day i get emails<br><br>
+
+    [[Start|day1-1]]<br>
+    [[About]]
+
+:: About
+    This horror-comedy/ham-handed satire was made by Emery Joyce in 4 hours for the Petite Mort division of Ectocomp 2025.<br><br>
+    
+    This a work of fiction; any resemblance to real persons, living, dead, or otherwise, is purely coincidental.<br><br>
+
+    <<return>>
+
+:: day1-1
+    Another day at the office. Time to sort through your emails. You scan your inbox:<br><br>
+    <<if !hasVisited("day1email1")>>[[Braille vendor question|day1email1]]<br><</if>>
+    <<if !hasVisited("day1email2")>>[[Fwd: Re: Print order?|day1email2]]<br><</if>>
+    <<if !hasVisited("day1email3")>>[[Inconsistent font sizes - mountain lions|day1email3]]<br><</if>>
+    <<if !hasVisited("day1email4")>>[[Company credit card changes STARTING 11/5|day1email4]]<br><</if>>
+    <<if !hasVisited("day1email5")>>[[Allergy inquiry (soy)]]<br><</if>>
+    <<if !hasVisited("day1email6")>>[[Edit request: My Wiggly Day|day1email9]]<br><</if>>
+
+    <<if $emails == 0>>[[Go home.|day2-1]]<</if>>
+
+:: day1email1
+    <<set $task = "Enrique">>
+    You skim the email. It's from Dave in Graphics. The braille vendor requested a change to a graphic to make it easier to convert to tactile, but it's not working very well, and he has an alternative suggestion and wants to know if it would be okay to do that instead.<br><br>
+
+    You're not sure why Dave is asking you. The signoffs he would need for the change are from Content and the braille vendor, and you don't really know anything about tactile graphics.<br><br>
+
+    <<if $access == false>>
+        This is an email about accessibility. You should [[pass it on to Enrique.|emailFWD][$recipient = "Enrique"]]
+        <<set $access = true>>
+    <<else>>
+        <<link [[Send to Caroline.|emailFWD]]>><<set $recipient = "Caroline">><</link>><br>
+        <<link [[Send to Enrique|emailFWD]]>><<set $recipient = "Enrique">><</link>><br>
+        <<link [[Send to Jeff|emailFWD]]>><<set $recipient = "Jeff">><</link>><br>
+        <<link [[Send to Sushila|emailFWD]]>><<set $recipient = "Sushila">><</link>>
+    <</if>>
+
+:: day1email2
+    <<set $task = "Jeff">>
+        You glance over the email. It seems a client is missing an order for print materials that they should have received by now and you have been asked to investigate. You're not sure why //you//; you have nothing to do with the print process after you sign off on the proofs, and the printing is done out of a location in another state, so it's not like you can go down the hall to check on it.<br><br>
+
+    <<if $print == false>>
+        This is an email about printing. You should [[pass it on to Jeff.|emailFWD][$recipient = "Jeff"]]
+        <<set $print = true>>
+    <<else>>
+        <<link [[Send to Caroline.|emailFWD]]>><<set $recipient = "Caroline">><</link>><br>
+        <<link [[Send to Enrique|emailFWD]]>><<set $recipient = "Enrique">><</link>><br>
+        <<link [[Send to Jeff|emailFWD]]>><<set $recipient = "Jeff">><</link>><br>
+        <<link [[Send to Sushila|emailFWD]]>><<set $recipient = "Sushila">><</link>>
+    <</if>>
+
+
+:: day1email3
+
+    You look over the email. Kathy in Program Management has received a complaint from a client that your online module about mountain lion genetics has inconsistent font sizes. Your heart lurches--checking this kind of thing //is// your responsibility and it'll look bad for you if you missed it--but when you look at the module in the WYSIWIG editor the font sizes look fine. This must be some weird bug caused by the platform update yesterday.<br><br>
+
+<<if $tech == false>>
+        This is an email about tech stuff. You should [[pass it on to Sushila.|emailFWD][$recipient = "Sushila"]]
+        <<set $tech = true>>
+    <<else>>
+        <<link [[Send to Caroline.|emailFWD]]>><<set $recipient = "Caroline">><</link>><br>
+        <<link [[Send to Enrique|emailFWD]]>><<set $recipient = "Enrique">><</link>><br>
+        <<link [[Send to Jeff|emailFWD]]>><<set $recipient = "Jeff">><</link>><br>
+        <<link [[Send to Sushila|emailFWD]]>><<set $recipient = "Sushila">><</link>>
+    <</if>>
+
+:: day1email4
+    This is an email about some sort of changes to how the corporate AmEx accounts are administered. The email is very insistent that everyone needs to be aware that this is HAPPENING 11/5 and should not come whining to the sender if they don't get their shit in order before then. You do not have and have never had a corporate AmEx.<br><br>
+
+    <<if $sales == false>>
+        Ugh, this must be for Caroline. She's in... sales, you think? You don't work directly with her and barely know her to say hello to in the hall, but you keep getting her emails because your name and hers are similar. You should [[pass it on to her.|emailFWD][$recipient = "Caroline"]]
+        <<set $tech = true>>
+    <<else>>
+        <<link [[Send to Caroline.|emailFWD]]>><<set $recipient = "Caroline">><</link>><br>
+        <<link [[Send to Enrique|emailFWD]]>><<set $recipient = "Enrique">><</link>><br>
+        <<link [[Send to Jeff|emailFWD]]>><<set $recipient = "Jeff">><</link>><br>
+        <<link [[Send to Sushila|emailFWD]]>><<set $recipient = "Sushila">><</link>>
+    <</if>>
+
+:: day1email5
+    This is an email from a client who wants to know if your printing facility uses soy-based inks.
+
+
+   <<if $print == false>>
+        This is an email about printing. You should [[pass it on to Jeff.|emailFWD][$recipient = "Jeff"]]
+        <<set $print = true>>
+    <<else>>
+        <<link [[Send to Caroline.|emailFWD]]>><<set $recipient = "Caroline">><</link>><br>
+        <<link [[Send to Enrique|emailFWD]]>><<set $recipient = "Enrique">><</link>><br>
+        <<link [[Send to Jeff|emailFWD]]>><<set $recipient = "Jeff">><</link>><br>
+        <<link [[Send to Sushila|emailFWD]]>><<set $recipient = "Sushila">><</link>>
+    <</if>>
+
+:: day1email6
+    Ah, finally, a task that's actually yours--Ling in Content wants an edit on a Grade 4 reading passage. The passage is incredibly inane, but it's nice to focus on that for a while instead of trying to redirect emails from people who apparently think everything is your responsibility for some reason. (On your resume you call this "facilitating communication between stakeholders.")<br><br>
+
+    <<return>>
+
+:: emailFWD
+    <<if $recipient = $task>>
+        You forward the email to $recipient. Now you don't have to think about that anymore.
+    <<elseif $recipient = "Caroline">>
+        You forward the email to Caroline. She responds quickly. "I wouldn't know anything about that, but I'll pass it along to $task! Have a nice day! :)"
+    <<elseif $recipient = "Enrique">>
+        You forward the email to Enrique. He responds minutes later. "Hi--I think you meant to send this to $task. Best regards." (He has CCed $task on the email.)
+    <<elseif $recipient = "Jeff">>
+        You forward the email to Jeff. He writes back, "Sorry, did you mean to send this to $task?" Whoops. You forward it to $task instead.
+    <<elseif $recipient = "Sushila">>
+        You forward the email to Sushila. After some time, she responds "Just saw this. Will send to $task."
+    <</if>><br><br>
+
+    [[Continue|$return]]
+
+:: day2-1
+
+
