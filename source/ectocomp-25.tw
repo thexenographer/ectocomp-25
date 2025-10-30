@@ -39,7 +39,9 @@
     <<return>>
 
 :: day1inbox
-    Another day at the office. Time to sort through your emails. You scan your inbox:<br><br>
+     It's another entirely normal day at the office. Time to sort through your emails.<br><br>
+     
+    You scan your inbox:<br><br>
     <<if !hasVisited("day1email1")>>[[Braille vendor question|day1email1]]<br><</if>>
     <<if !hasVisited("day1email2")>>[[Fwd: Re: Print order?|day1email2]]<br><</if>>
     <<if !hasVisited("day1email3")>>[[Inconsistent font sizes - mountain lions|day1email3]]<br><</if>>
@@ -206,7 +208,7 @@
 
     This email is requesting a modification to a print order, if it's not too late. You don't know where in the printing process anything is, so you're not sure.<br><br>
     
-     <<link [[Send to Caroline|day2absence]]>><<set $recipient = "Caroline">><</link>><br>
+    <<link [[Send to Caroline|day2absence]]>><<set $recipient = "Caroline">><</link>><br>
     <<link [[Send to Enrique|day2absence]]>><<set $recipient = "Enrique">><</link>><br>
     <<link [[Send to Jeff|day2absence]]>><<set $recipient = "Jeff">><</link>><br>
     <<link [[Send to Sushila|day2absence]]>><<set $recipient = "Sushila">><</link>>
@@ -280,7 +282,14 @@
     <<if !hasVisited("day3email5")>>[[Tracking number?|day3email5]]<br><</if>>
     <<if !hasVisited("day3email6")>>[[platform guide for teachers|day3email6]]<br><</if>>
 
+    <<if $emails == 0>>Even working through lunch, you didn't manage to wrap up before 5:30 today, but oh well, at least you're done now.<br><br>
+
+    [[Go home.|day3night]]
+    <</if>>
+
 :: day3email1
+    <<set $emails -= 1>>
+    <<set $task = "Enrique">>
     This is an email listing some screenreader compatibility issues with the online modules.<br><br>
 
     <<link [[Send to Caroline|day3absence]]>><<set $recipient = "Caroline">><</link>><br>
@@ -288,14 +297,41 @@
     <<link [[Send to Sushila|day3absence]]>><<set $recipient = "Sushila">><</link>>
 
 :: day3email2
+    <<set $emails -= 1>>
+    <<set $task = "Caroline">>
+    This is some kind of incomprehensible sales thing about new packages that the "WSPD account", whatever that is, might be interested in.<br><br>
+    
+    <<link [[Send to Caroline|emailFWD]]>><<set $recipient = "Caroline">><</link>><br>
+    <<link [[Send to Sushila|emailFWD]]>><<set $recipient = "Sushila">><</link>>
 
 :: day3email3
+    <<set $emails -= 1>>
+    This is an inquiry from Content about what sizes of paper the printing facility can print on. You almost automatically send it on to Jeff before remembering it's your responsibility now. You flail around trying to find the right person to ask and probably piss off at least three people in the process.<br><br>
+
+    [[Continue|day3inbox]]
 
 :: day3email4
+    <<set $emails -= 1>>
+    <<set $task = "Sushila">>
+
+    Another complaint from a client: for some reason the arrow buttons to move forward through the module have stopped working for the Tundra Biome science module specifically. Nothing else seems to be affected.<br><br>
+
+    <<link [[Send to Caroline|emailFWD]]>><<set $recipient = "Caroline">><</link>><br>
+    <<link [[Send to Sushila|emailFWD]]>><<set $recipient = "Sushila">><</link>>
 
 :: day3email5
+    <<set $emails -= 1>>
+
+    A client is requesting a tracking number for a shipment of print materials. Right, this is your responsibility now too. Of course, no one's sending you the tracking numbers when the shipments go out the way you're pretty sure they used to send them to Jeff. You lose nearly an hour trying to sort this out.<br><br>
+
+    [[Continue|day3inbox]]
 
 :: day3email6
+    <<set $emails -= 1>>
+
+    This is a rare edit request from Tech; they've written up a guide for teachers to using your online platform in class. Or they've created one, anyway. While the spelling and grammar are immaculate, the information is weirdly organized, sometimes vague and repetitive, and sometimes just wrong in ways that anyone familiar with the platform should have noticed, so you suspect the actual author is probably Copilot. You spend a lot of time rewriting it.<br><br>
+
+    [[Continue|day3inbox]]
 
 :: day3absence
        <<if $task != $recipient>>You send the email to $recipient, who says "Sorry, this isn't my area!" Whoops.<br><br><</if>>
@@ -310,3 +346,175 @@
        You weren't entirely sure your boss wasn't just fucking with you, but Latisha has never seemed given to practical jokes. What is going on here?<br><br>
 
        [[Continue|day3inbox]]
+
+:: day3night
+    You're out of leftovers. You microwave some instant mac 'n' cheese. Then you fail to read your book for an hour or so until you fall asleep on the couch.<br><br>
+
+    <<set $emails = 6>>
+
+    You wake up feeling stiff and sore, but that's really your own fault. You've got to get [[back to work.|day4inbox]]
+
+:: day4inbox
+    You're almost certain the office is quieter now. The fluorescent light above you has gone out entirely.<br><br>
+
+     <<set $return = "day4inbox">>
+    
+
+    <<if !hasVisited("day4email1")>>[[Broken links in G5 math|day4email1]]<br><</if>>
+    <<if !hasVisited("day4email2")>>[[New sales packages for 2026|day4email2]]<br><</if>>
+    <<if !hasVisited("day4email3")>>[[Printing error|day4email3]]<br><</if>>
+    <<if !hasVisited("day4email4")>>[[Sea Turtles for ASL vendor|day4email4]]<br><</if>>
+    <<if !hasVisited("day4email5")>>[[New client - first meeting|day4email5]]<br><</if>>
+    <<if !hasVisited("day4email6")>>[[Edit request: G6 Ladfkl;sslfssssssssssssss|day4email6]]<br><</if>>
+
+    <<if $emails == 0>>Coming up for air, you notice it's already 7.<br><br>
+
+    [[Go home.|day4night]]
+    <</if>>
+
+:: day4email1
+    <<set $emails -= 1>>
+    <<set $task = "Sushila">>
+    Another bug report; apparently some of the internal links in one of the grade 5 math modules aren't working.<br><br>
+
+    <<link [[Send to Caroline|day4absence]]>><<set $recipient = "Caroline">><</link>><br>
+    <<link [[Send to Sushila|day4absence]]>><<set $recipient = "Sushila">><</link>>
+
+:: day4email2
+    <<set $emails -= 1>>
+    <<set $task = "Caroline">>
+    
+    This is a listing of some new sales packages coming in the next few months, with an exhortation to reach out to contacts who may be interested.<br><br>
+    
+    <<link [[Send to Caroline|emailFWD]]>><<set $recipient = "Caroline">><</link>>
+
+:: day4email3
+    <<set $emails -= 1>>
+    Someone's spotted a printing error in a run of materials. You feel a little queasy. If this doesn't get sorted out in a speedy and inexpensive manner, you're going to be in trouble, but you have absolutely no idea what the process is.<br><br>
+
+    You do your best, but you're not sure it's very good at all.<br><br>
+
+    [[Continue|day4inbox]]
+
+:: day4email4
+    <<set $emails -= 1>>
+
+    You've been sent the text of a module on sea turtle biology to send to the ASL vendor. You try to figure out who the ASL vendor is even supposed to be without actually asking people who will act like you're an idiot for not knowing. You hope you've sent the email to the right person.<br><br>
+
+    [[Continue|day4inbox]]
+:: day4email5
+    <<set $emails -= 1>>
+    This is an email trying to set up a meeting between Caroline from Sales and a new client. At last, something that's not your responsibility.
+
+    <br><br>
+
+    <<link [[Send to Caroline|emailFWD]]>><<set $recipient = "Caroline">><</link>>
+
+:: day4email6
+    <<set $emails -= 1>>
+
+    The body of this email is just "ssssss" some more. You wonder briefly if whatever's been vanishing your coworkers hit this one mid-email.<br><br>
+
+    But when you respond, the email goes through, and the Content person apologetically says that their cat hopped on their keyboard at an inopportune moment. They send you the Language Arts passage and you get on with things.<br><br>
+
+    [[Continue|day4inbox]]
+
+:: day4absence
+       <<if $task != $recipient>>You send the email to $recipient, who says "Sorry, this isn't my area!" Whoops.<br><br><</if>>
+       You forward it to Sushila.<br><br>
+
+       The "delivery failed" notification feels like a punch to the stomach.<br><br>
+
+       You reach out to another tech person, Laura. You don't dare to mention Sushila, but you tentatively ask if Laura can help you.<br><br>
+
+       "You've always fixed those before, right?" she replies. "We're really supposed to be here for the big platform-wide bugs. And honestly I'm so busy with those I don't have time to take on extra stuff."<br><br>
+
+       [[Continue|day4inbox]]
+
+:: day4night
+   You eat crackers and hummus for dinner while standing in front of the fridge. You then decide you're going to go straight to bed, but instead of sleeping you scroll through social media on your phone for several hours.<br><br>
+
+   You definitely have not slept enough when your alarm goes off next morning, but oh well. [[Back to work.|day5inbox]]
+
+:: day5inbox
+    The office is practically empty, though your boss is still at his desk. You've gotten a really unreasonable number of emails between last night and this morning. You scroll through until you find one you're pretty sure is not for you:<br><br>
+
+    [[Client meeting followup|day5email1]]
+
+:: day5email1
+    This is a followup email from a client to someone who is almost certainly intended to be Caroline, given that you have had zero meetings with clients in the past several days (or ever).<br><br>
+
+    [[Send to Caroline|day5absence]]
+
+:: day5absence
+
+    You should have expected the delivery failure notification, but somehow you didn't. Heart racing, mouth dry, you send an email to one of the other people who was CCed on that Sales lunch email a few days ago.<br><br>
+
+    "That was you who took that meeting, wasn't it?" he says. "I don't know anything about it."<br><br>
+
+    You can't handle this anymore.<br><br>
+
+    [[Talk to your boss.|day5boss]]
+
+:: day5boss
+    Your boss welcomes you into his office. "What did you want to talk about?" he asks.<br><br>
+
+    <<linkreplace '"My coworkers keep disappearing and everyone acts like they never existed and their work has always been my responsibility, and I don\'t have any of the information I need to do this stuff and people get kind of hostile when I ask, and I feel like I\'m going crazy."'>>
+        "I'm, uh, I'm having some trouble with the workload," you say. "I'm wondering if maybe we could bring on someone else to help out?"<br><br>
+
+        "That would be moving backwards," your boss says sternly, "and we need to be looking forwards, into the future. You simply need to work more efficiently. You have that Copilot subscription, don't you?"<br><br>
+
+        "Sure," you say, numbly. You can't think what Copilot is supposed to do for you in this situation.<br><br>
+
+        [[You get up and go back to your desk.|day5end]]
+    <</linkreplace>>
+
+:: day5end
+    You put your head down and do your best to plow through your list of tasks. You're not actually finished when 7 PM rolls around, but you don't think you have any more useful work in you.<br><br>
+
+    [[Go home.|day5night]]
+
+:: day5night
+    You can't bring yourself to eat dinner. You sit on the couch and stare at the wall. Everyone else you work with regularly is gone now. Is the force that's been causing them to vanish going to come for you next? What is it? What will it feel like? [[Will it hurt?|day6morning]]
+
+:: day6morning
+    Your alarm goes off. You must have fallen asleep at some point, but you don't feel rested at all. You're still here though. [[Time for work.|day6inbox]]
+
+:: day6inbox
+    [[New print order|end1][$subject="printing"]]<br>
+    [[Contrast guidelines review|end1][$subject="accessibility"]]<br>
+    [[Tier 3 upgrade now available|end1][$subject="sales"]]<br>
+    [[Cursor disappearing?|end1][$subject="tech"]]<br>
+    [[Refreshabraille number issue|end1][$subject="accessibility"]]<br>
+    [[Text entry in end-of-module quiz|end1][$subject="tech"]]
+
+:: end1
+    This is an email about $subject.<br><br>
+
+    [[Do it yourself.|end2]]
+
+:: end2
+    This is an email about sales.<br><br>
+
+    [[Do it yourself.|end3]]
+
+:: end3
+    This is an email about tech.<br><br>
+
+    [[Do it yourself.|end4]]
+
+:: end4
+    [[Do it yourself.|end5]]
+
+:: end5
+
+    [[Do it yourself.|end6]]
+
+:: end6
+    [[Do it yourself.|end]]
+
+:: end
+
+    <center><<button "Return to start">>
+	    <<run Engine.restart()>>
+    <</button>></center>
