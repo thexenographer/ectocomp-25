@@ -10,6 +10,7 @@
 
 :: StoryInit
     <<run Config.passages.nobr = true;>>
+    <<run Config.ui.stowBarInitially = true;>>
 
     <<set $print = false>>
     <<set $tech = false>>
