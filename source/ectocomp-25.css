@@ -10,11 +10,7 @@ body {
   font-size: 120%;
   /* Used to center the box */
   text-align: center;
-  background-image: linear-gradient(rgba(118, 214, 255, 0.922), rgba(118, 214, 255, 0.922));
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-attachment: fixed;
-  background-size: auto, cover;
+  background-color: rgba(118, 214, 255, 0.922);
 }
 
 
@@ -239,15 +235,15 @@ textarea:hover.dark {
 }
 
 #ui-bar {
-	background-color: #FFD500;
+	background-color: #90edff;
 	border-right: 1px solid black;
 	text-align: center;
   	color: black;
-    font-family: Georgia, serif;
+    font-family: Verdana, sans-serif;
 }
 #ui-bar a {
 	text-decoration: none;
-  	color: rgba(2, 96, 38, 0.922);
+  	color: rgba(0, 47, 255, 0.922);
 }
 #ui-bar hr {
 	border-color: black;
@@ -262,7 +258,7 @@ textarea:hover.dark {
 }
 
 #ui-bar-history [id|="history"]:hover {
-	background-color: #d0ae00;
+	background-color: #7be5fa;
 	border-color: black;
 }
 
@@ -271,22 +267,22 @@ textarea:hover.dark {
 }
 
 #ui-bar-toggle:hover {
-	background-color: #d0ae00;
+	background-color: #7be5fa;
   	border-color: black;
 }
 
 #ui-dialog-body {
-  color: rgba(2, 96, 38, 0.922);
+  color: rgba(0, 47, 255, 0.922);
   background-color: #fffabf;
  }
 
 #ui-dialog-titlebar {
-  color: rgba(2, 96, 38, 0.922);
+  color: rgba(0, 47, 255, 0.922);
   background-color: #fffabf;
  }
 
 #ui-dialog-title {
-  color: rgba(2, 96, 38, 0.922);
+  color: rgba(0, 47, 255, 0.922);
   background-color: #fffabf;
  }
 
@@ -299,8 +295,12 @@ textarea:hover.dark {
 }
 
 #menu li a:hover {
-	background-color: #d0ae00;
+	background-color: #7be5fa;
 	border-color: black;
+}
+
+#ui-dialog-body.saves>h2 {
+  background-color:#fffabf;
 }
 
 .error-view {

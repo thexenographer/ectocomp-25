@@ -116,11 +116,7 @@ body {
   font-size: 120%;
   /* Used to center the box */
   text-align: center;
-  background-image: linear-gradient(rgba(118, 214, 255, 0.922), rgba(118, 214, 255, 0.922));
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-attachment: fixed;
-  background-size: auto, cover;
+  background-color: rgba(118, 214, 255, 0.922);
 }
 
 
@@ -345,15 +341,15 @@ textarea:hover.dark {
 }
 
 #ui-bar {
-	background-color: #FFD500;
+	background-color: #90edff;
 	border-right: 1px solid black;
 	text-align: center;
   	color: black;
-    font-family: Georgia, serif;
+    font-family: Verdana, sans-serif;
 }
 #ui-bar a {
 	text-decoration: none;
-  	color: rgba(2, 96, 38, 0.922);
+  	color: rgba(0, 47, 255, 0.922);
 }
 #ui-bar hr {
 	border-color: black;
@@ -368,7 +364,7 @@ textarea:hover.dark {
 }
 
 #ui-bar-history [id|="history"]:hover {
-	background-color: #d0ae00;
+	background-color: #7be5fa;
 	border-color: black;
 }
 
@@ -377,22 +373,22 @@ textarea:hover.dark {
 }
 
 #ui-bar-toggle:hover {
-	background-color: #d0ae00;
+	background-color: #7be5fa;
   	border-color: black;
 }
 
 #ui-dialog-body {
-  color: rgba(2, 96, 38, 0.922);
+  color: rgba(0, 47, 255, 0.922);
   background-color: #fffabf;
  }
 
 #ui-dialog-titlebar {
-  color: rgba(2, 96, 38, 0.922);
+  color: rgba(0, 47, 255, 0.922);
   background-color: #fffabf;
  }
 
 #ui-dialog-title {
-  color: rgba(2, 96, 38, 0.922);
+  color: rgba(0, 47, 255, 0.922);
   background-color: #fffabf;
  }
 
@@ -405,8 +401,12 @@ textarea:hover.dark {
 }
 
 #menu li a:hover {
-	background-color: #d0ae00;
+	background-color: #7be5fa;
 	border-color: black;
+}
+
+#ui-dialog-body.saves>h2 {
+  background-color:#fffabf;
 }
 
 .error-view {
@@ -454,7 +454,7 @@ html[data-debug-view] .debug[data-name][data-type].nonvoid:after {
     &lt;&lt;set $emails = 6&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Start" tags="" position="225,100" size="100,100">&lt;p style=&quot;text-align:center;line-height:200%&quot;&gt;@@font-size:200%;Every day I get emails@@&lt;/p&gt;
 
     &lt;p style=&quot;text-align:center&quot;&gt;[[Start|day1inbox]]&lt;br&gt;
-    [[About]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="3" name="About" tags="" position="350,100" size="100,100">This horror-comedy/ham-handed satire was made by Emery Joyce in 4 hours for the Petite Mort division of Ectocomp 2025.&lt;br&gt;&lt;br&gt;
+    [[About]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="3" name="About" tags="" position="350,100" size="100,100">This horror-comedy/ham-handed satire was made by Emery Joyce in 4 hours for the Petite Mort division of Ectocomp 2025. Thanks to Mike Russo and N. Cormier for playtesting.&lt;br&gt;&lt;br&gt;
     
     This a work of fiction; any resemblance to real persons, living, dead, or otherwise, is purely coincidental.&lt;br&gt;&lt;br&gt;
 
@@ -547,7 +547,7 @@ html[data-debug-view] .debug[data-name][data-type].nonvoid:after {
         You forward the email to Sushila. After some time, she responds &quot;Just saw this. Will send to $task.&quot;
     &lt;&lt;/if&gt;&gt;&lt;br&gt;&lt;br&gt;
 
-    [[Continue|$return]]</tw-passagedata><tw-passagedata pid="12" name="day1night" tags="" position="225,225" size="100,100">You take the train home, microwave some leftovers for dinner, and spend some time reading on the couch before bed.&lt;br&gt;&lt;br&gt;
+    [[Continue|$return]]</tw-passagedata><tw-passagedata pid="12" name="day1night" tags="" position="225,225" size="100,100">You take the train home, make a quick stir-fry for dinner, and spend some time reading on the couch before bed.&lt;br&gt;&lt;br&gt;
     &lt;&lt;set $emails = 6&gt;&gt;
     All too soon, your alarm goes off, and you have to [[return to the office|day2inbox]].</tw-passagedata><tw-passagedata pid="13" name="day2inbox" tags="" position="350,225" size="100,100">&lt;&lt;set $return = &quot;day2inbox&quot;&gt;&gt;
     
@@ -617,7 +617,7 @@ html[data-debug-view] .debug[data-name][data-type].nonvoid:after {
 
     Your boss frowns. &quot;Jeff who?&quot;&lt;br&gt;&lt;br&gt;
 
-    &quot;Jeff Myers, the guy who liaises with the print facility in Atlanta? Did he get laid off? I got a request to modify the print order and I don&#39;t know who to send it to now.&quot;&lt;br&gt;&lt;br&gt;
+    &quot;Jeff Myers, the guy who liaises with the print facility in Atlanta? Did he get laid off? I got a request to modify a print order and I don&#39;t know who to send it to now.&quot;&lt;br&gt;&lt;br&gt;
 
     &quot;But it&#39;s //your// responsibility to liaise with the print facility,&quot; your boss says. &quot;It has been since day one.&quot; He shakes his head gravely. &quot;That&#39;s the problem with this company--people don&#39;t take ownership of their tasks.&quot;&lt;br&gt;&lt;br&gt;
 
@@ -627,7 +627,7 @@ html[data-debug-view] .debug[data-name][data-type].nonvoid:after {
 
     &quot;After five years? I don&#39;t think that can possibly be true,&quot; says your boss. &quot;And if it is, well, why don&#39;t you show some initiative and find out?&quot;&lt;br&gt;&lt;br&gt;
 
-    [[You go back to your desk.|day2inbox]]</tw-passagedata><tw-passagedata pid="22" name="day2night" tags="" position="225,350" size="100,100">You microwave some more leftovers. You try to read, but find yourself staring at the same page for ages, not taking any of it in.&lt;br&gt;&lt;br&gt;
+    [[You go back to your desk.|day2inbox]]</tw-passagedata><tw-passagedata pid="22" name="day2night" tags="" position="225,350" size="100,100">You microwave your leftovers from last night. You try to read, but find yourself staring at the same page for ages, not taking any of it in.&lt;br&gt;&lt;br&gt;
     &lt;&lt;set $emails = 6&gt;&gt;
     All too soon your alarm goes off and it&#39;s [[back to the office.|day3inbox]]</tw-passagedata><tw-passagedata pid="23" name="day3inbox" tags="" position="350,350" size="100,100">Still raining. The fluorescent light flickers even more erratically. You wonder if the office chatter is quieter than usual today or if it&#39;s just your imagination.&lt;br&gt;&lt;br&gt;
 
@@ -683,11 +683,11 @@ html[data-debug-view] .debug[data-name][data-type].nonvoid:after {
 
        You weren&#39;t entirely sure your boss wasn&#39;t just fucking with you, but Latisha has never seemed given to practical jokes. What is going on here?&lt;br&gt;&lt;br&gt;
 
-       [[Continue|day3inbox]]</tw-passagedata><tw-passagedata pid="31" name="day3night" tags="" position="100,475" size="100,100">You&#39;re out of leftovers. You microwave some instant mac &#39;n&#39; cheese. Then you fail to read your book for an hour or so until you fall asleep on the couch.&lt;br&gt;&lt;br&gt;
+       [[Continue|day3inbox]]</tw-passagedata><tw-passagedata pid="31" name="day3night" tags="" position="100,475" size="100,100">You&#39;re out of leftovers and too tired to cook. You microwave some instant mac &#39;n&#39; cheese. Then you decide to try to go to bed early, but end up lying awake for several hours scrolling through social media on your phone.&lt;br&gt;&lt;br&gt;
 
     &lt;&lt;set $emails = 6&gt;&gt;
 
-    You wake up feeling stiff and sore, but that&#39;s really your own fault. You&#39;ve got to get [[back to work.|day4inbox]]</tw-passagedata><tw-passagedata pid="32" name="day4inbox" tags="" position="225,475" size="100,100">You&#39;re almost certain the office is quieter now. The fluorescent light above you has gone out entirely.&lt;br&gt;&lt;br&gt;
+    You definitely haven&#39;t gotten enough sleep by the time your alarm goes off, but oh well. [[Back to work.|day4inbox]]</tw-passagedata><tw-passagedata pid="32" name="day4inbox" tags="" position="225,475" size="100,100">You&#39;re almost certain the office is quieter now. The fluorescent light above you has gone out entirely.&lt;br&gt;&lt;br&gt;
 
      &lt;&lt;set $return = &quot;day4inbox&quot;&gt;&gt;
     
@@ -741,9 +741,9 @@ html[data-debug-view] .debug[data-name][data-type].nonvoid:after {
 
        &quot;You&#39;ve always fixed those before, right?&quot; she replies. &quot;We&#39;re really supposed to be here for the big platform-wide bugs. And honestly I&#39;m so busy with those I don&#39;t have time to take on extra stuff.&quot;&lt;br&gt;&lt;br&gt;
 
-       [[Continue|day4inbox]]</tw-passagedata><tw-passagedata pid="40" name="day4night" tags="" position="1225,475" size="100,100">You eat crackers and hummus for dinner while standing in front of the fridge. You then decide you&#39;re going to go straight to bed, but instead of sleeping you scroll through social media on your phone for several hours.&lt;br&gt;&lt;br&gt;
+       [[Continue|day4inbox]]</tw-passagedata><tw-passagedata pid="40" name="day4night" tags="" position="1225,475" size="100,100">You eat crackers and hummus for dinner while standing in front of the fridge. Then you head over to the couch. You should probably do something productive or entertaining, but you can&#39;t think what. It&#39;s already past 9, anyway. While you&#39;re in the midst of deciding, you fall asleep.&lt;br&gt;&lt;br&gt;
 
-   You definitely have not slept enough when your alarm goes off next morning, but oh well. [[Back to work.|day5inbox]]</tw-passagedata><tw-passagedata pid="41" name="day5inbox" tags="" position="100,600" size="100,100">The office is practically empty, though your boss is still at his desk. You&#39;ve gotten a really unreasonable number of emails between last night and this morning. You scroll through until you find one you&#39;re pretty sure is not for you:&lt;br&gt;&lt;br&gt;
+   Your alarm goes off. Your phone wasn&#39;t plugged in, so it&#39;s at 51% battery. You feel stiff and sore. But this is all your own fault, really, so how can you complain? Anyway, you&#39;ve got to get [[back to work.|day5inbox]]</tw-passagedata><tw-passagedata pid="41" name="day5inbox" tags="" position="100,600" size="100,100">The office is practically empty, though your boss is still at his desk. You&#39;ve gotten a really unreasonable number of emails between last night and this morning. You scroll through until you find one you&#39;re pretty sure is not for you:&lt;br&gt;&lt;br&gt;
 
     [[Client meeting followup|day5email1]]</tw-passagedata><tw-passagedata pid="42" name="day5email1" tags="" position="225,600" size="100,100">This is a followup email from a client to someone who is almost certainly intended to be Caroline, given that you have had zero meetings with clients in the past several days (or ever).&lt;br&gt;&lt;br&gt;
 
@@ -758,25 +758,35 @@ html[data-debug-view] .debug[data-name][data-type].nonvoid:after {
     &lt;&lt;linkreplace &#39;&quot;My coworkers keep disappearing and everyone acts like they never existed and their work has always been my responsibility, and I don\&#39;t have any of the information I need to do this stuff and people get kind of hostile when I ask, and I feel like I\&#39;m going crazy.&quot;&#39;&gt;&gt;
         &quot;I&#39;m, uh, I&#39;m having some trouble with the workload,&quot; you say. &quot;I&#39;m wondering if maybe we could bring on someone else to help out?&quot;&lt;br&gt;&lt;br&gt;
 
-        &quot;That would be moving backwards,&quot; your boss says sternly, &quot;and we need to be looking forwards, into the future. You simply need to work more efficiently. You have that Copilot subscription, don&#39;t you?&quot;&lt;br&gt;&lt;br&gt;
+        &quot;That would be moving backwards,&quot; your boss says sternly, &quot;and we need to be looking forwards, into the future. You need to work more efficiently, that&#39;s all. You have that Copilot subscription, don&#39;t you?&quot;&lt;br&gt;&lt;br&gt;
 
         &quot;Sure,&quot; you say, numbly. You can&#39;t think what Copilot is supposed to do for you in this situation.&lt;br&gt;&lt;br&gt;
 
         [[You get up and go back to your desk.|day5end]]
     &lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="day5end" tags="" position="600,600" size="100,100">You put your head down and do your best to plow through your list of tasks. You&#39;re not actually finished when 7 PM rolls around, but you don&#39;t think you have any more useful work in you.&lt;br&gt;&lt;br&gt;
 
-    [[Go home.|day5night]]</tw-passagedata><tw-passagedata pid="46" name="day5night" tags="" position="725,600" size="100,100">You can&#39;t bring yourself to eat dinner. You sit on the couch and stare at the wall. Everyone else you work with regularly is gone now. Is the force that&#39;s been causing them to vanish going to come for you next? What is it? What will it feel like? [[Will it hurt?|day6morning]]</tw-passagedata><tw-passagedata pid="47" name="day6morning" tags="" position="850,600" size="100,100">Your alarm goes off. You must have fallen asleep at some point, but you don&#39;t feel rested at all. You&#39;re still here though. [[Time for work.|day6inbox]]</tw-passagedata><tw-passagedata pid="48" name="day6inbox" tags="" position="975,600" size="100,100">[[New print order|end1][$subject=&quot;printing&quot;]]&lt;br&gt;
+    [[Go home.|day5night]]</tw-passagedata><tw-passagedata pid="46" name="day5night" tags="" position="725,600" size="100,100">You can&#39;t bring yourself to eat dinner. You sit on the couch and stare at the wall. Everyone else you worked with regularly is gone now.&lt;br&gt;&lt;br&gt;
+    
+    Is the force that&#39;s been causing them to vanish going to come for you next?&lt;br&gt;&lt;br&gt;
+    
+    What is it? What will it feel like? [[Will it hurt?|day6morning]]</tw-passagedata><tw-passagedata pid="47" name="day6morning" tags="" position="850,600" size="100,100">Your alarm goes off. You must have fallen asleep at some point, but you don&#39;t feel rested at all. You&#39;re still here though. [[Time for work.|day6inbox]]</tw-passagedata><tw-passagedata pid="48" name="day6inbox" tags="" position="975,600" size="100,100">[[New print order|end1][$subject=&quot;printing&quot;]]&lt;br&gt;
     [[Contrast guidelines review|end1][$subject=&quot;accessibility&quot;]]&lt;br&gt;
     [[Tier 3 upgrade now available|end1][$subject=&quot;sales&quot;]]&lt;br&gt;
     [[Cursor disappearing?|end1][$subject=&quot;tech&quot;]]&lt;br&gt;
     [[Refreshabraille number issue|end1][$subject=&quot;accessibility&quot;]]&lt;br&gt;
     [[Text entry in end-of-module quiz|end1][$subject=&quot;tech&quot;]]</tw-passagedata><tw-passagedata pid="49" name="end1" tags="" position="1100,600" size="100,100">This is an email about $subject.&lt;br&gt;&lt;br&gt;
 
-    [[Do it yourself.|end2]]</tw-passagedata><tw-passagedata pid="50" name="end2" tags="" position="1225,600" size="100,100">This is an email about sales.&lt;br&gt;&lt;br&gt;
+    [[Do it yourself.|end2]]</tw-passagedata><tw-passagedata pid="50" name="end2" tags="" position="1225,600" size="100,100">You open another email.&lt;br&gt;&lt;br&gt;
 
-    [[Do it yourself.|end3]]</tw-passagedata><tw-passagedata pid="51" name="end3" tags="" position="100,725" size="100,100">This is an email about tech.&lt;br&gt;&lt;br&gt;
+    This one is about sales.&lt;br&gt;&lt;br&gt;
 
-    [[Do it yourself.|end4]]</tw-passagedata><tw-passagedata pid="52" name="end4" tags="" position="225,725" size="100,100">[[Do it yourself.|end5]]</tw-passagedata><tw-passagedata pid="53" name="end5" tags="" position="350,725" size="100,100">[[Do it yourself.|end6]]</tw-passagedata><tw-passagedata pid="54" name="end6" tags="" position="475,725" size="100,100">[[Do it yourself.|end]]</tw-passagedata><tw-passagedata pid="55" name="end" tags="" position="600,725" size="100,100">&lt;center&gt;&lt;&lt;button &quot;Return to start&quot;&gt;&gt;
+    [[Do it yourself.|end3]]</tw-passagedata><tw-passagedata pid="51" name="end3" tags="" position="100,725" size="100,100">You open another email&lt;br&gt;&lt;br&gt;
+
+    This one is about tech.&lt;br&gt;&lt;br&gt;
+
+    [[Do it yourself.|end4]]</tw-passagedata><tw-passagedata pid="52" name="end4" tags="" position="225,725" size="100,100">You open another email.&lt;br&gt;&lt;br&gt;
+
+    [[Do it yourself.|end5]]</tw-passagedata><tw-passagedata pid="53" name="end5" tags="" position="350,725" size="100,100">[[Do it yourself.|end6]]</tw-passagedata><tw-passagedata pid="54" name="end6" tags="" position="475,725" size="100,100">[[Do it yourself.|end]]</tw-passagedata><tw-passagedata pid="55" name="end" tags="" position="600,725" size="100,100">&lt;center&gt;&lt;&lt;button &quot;Return to start&quot;&gt;&gt;
 	    &lt;&lt;run Engine.restart()&gt;&gt;
     &lt;&lt;/button&gt;&gt;&lt;/center&gt;</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">

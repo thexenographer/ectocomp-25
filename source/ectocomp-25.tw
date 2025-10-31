@@ -32,7 +32,7 @@
     [[About]]</p>
 
 :: About
-    This horror-comedy/ham-handed satire was made by Emery Joyce in 4 hours for the Petite Mort division of Ectocomp 2025.<br><br>
+    This horror-comedy/ham-handed satire was made by Emery Joyce in 4 hours for the Petite Mort division of Ectocomp 2025. Thanks to Mike Russo and N. Cormier for playtesting.<br><br>
     
     This a work of fiction; any resemblance to real persons, living, dead, or otherwise, is purely coincidental.<br><br>
 
@@ -153,7 +153,7 @@
     [[Continue|$return]]
 
 :: day1night
-    You take the train home, microwave some leftovers for dinner, and spend some time reading on the couch before bed.<br><br>
+    You take the train home, make a quick stir-fry for dinner, and spend some time reading on the couch before bed.<br><br>
     <<set $emails = 6>>
     All too soon, your alarm goes off, and you have to [[return to the office|day2inbox]].
 
@@ -252,7 +252,7 @@
 
     Your boss frowns. "Jeff who?"<br><br>
 
-    "Jeff Myers, the guy who liaises with the print facility in Atlanta? Did he get laid off? I got a request to modify the print order and I don't know who to send it to now."<br><br>
+    "Jeff Myers, the guy who liaises with the print facility in Atlanta? Did he get laid off? I got a request to modify a print order and I don't know who to send it to now."<br><br>
 
     "But it's //your// responsibility to liaise with the print facility," your boss says. "It has been since day one." He shakes his head gravely. "That's the problem with this company--people don't take ownership of their tasks."<br><br>
 
@@ -265,7 +265,7 @@
     [[You go back to your desk.|day2inbox]]
 
 :: day2night
-    You microwave some more leftovers. You try to read, but find yourself staring at the same page for ages, not taking any of it in.<br><br>
+    You microwave your leftovers from last night. You try to read, but find yourself staring at the same page for ages, not taking any of it in.<br><br>
     <<set $emails = 6>>
     All too soon your alarm goes off and it's [[back to the office.|day3inbox]]
 
@@ -348,11 +348,11 @@
        [[Continue|day3inbox]]
 
 :: day3night
-    You're out of leftovers. You microwave some instant mac 'n' cheese. Then you fail to read your book for an hour or so until you fall asleep on the couch.<br><br>
+    You're out of leftovers and too tired to cook. You microwave some instant mac 'n' cheese. Then you decide to try to go to bed early, but end up lying awake for several hours scrolling through social media on your phone.<br><br>
 
     <<set $emails = 6>>
 
-    You wake up feeling stiff and sore, but that's really your own fault. You've got to get [[back to work.|day4inbox]]
+    You definitely haven't gotten enough sleep by the time your alarm goes off, but oh well. [[Back to work.|day4inbox]]
 
 :: day4inbox
     You're almost certain the office is quieter now. The fluorescent light above you has gone out entirely.<br><br>
@@ -432,9 +432,9 @@
        [[Continue|day4inbox]]
 
 :: day4night
-   You eat crackers and hummus for dinner while standing in front of the fridge. You then decide you're going to go straight to bed, but instead of sleeping you scroll through social media on your phone for several hours.<br><br>
+   You eat crackers and hummus for dinner while standing in front of the fridge. Then you head over to the couch. You should probably do something productive or entertaining, but you can't think what. It's already past 9, anyway. While you're in the midst of deciding, you fall asleep.<br><br>
 
-   You definitely have not slept enough when your alarm goes off next morning, but oh well. [[Back to work.|day5inbox]]
+   Your alarm goes off. Your phone wasn't plugged in, so it's at 51% battery. You feel stiff and sore. But this is all your own fault, really, so how can you complain? Anyway, you've got to get [[back to work.|day5inbox]]
 
 :: day5inbox
     The office is practically empty, though your boss is still at his desk. You've gotten a really unreasonable number of emails between last night and this morning. You scroll through until you find one you're pretty sure is not for you:<br><br>
@@ -462,7 +462,7 @@
     <<linkreplace '"My coworkers keep disappearing and everyone acts like they never existed and their work has always been my responsibility, and I don\'t have any of the information I need to do this stuff and people get kind of hostile when I ask, and I feel like I\'m going crazy."'>>
         "I'm, uh, I'm having some trouble with the workload," you say. "I'm wondering if maybe we could bring on someone else to help out?"<br><br>
 
-        "That would be moving backwards," your boss says sternly, "and we need to be looking forwards, into the future. You simply need to work more efficiently. You have that Copilot subscription, don't you?"<br><br>
+        "That would be moving backwards," your boss says sternly, "and we need to be looking forwards, into the future. You need to work more efficiently, that's all. You have that Copilot subscription, don't you?"<br><br>
 
         "Sure," you say, numbly. You can't think what Copilot is supposed to do for you in this situation.<br><br>
 
@@ -475,7 +475,11 @@
     [[Go home.|day5night]]
 
 :: day5night
-    You can't bring yourself to eat dinner. You sit on the couch and stare at the wall. Everyone else you work with regularly is gone now. Is the force that's been causing them to vanish going to come for you next? What is it? What will it feel like? [[Will it hurt?|day6morning]]
+    You can't bring yourself to eat dinner. You sit on the couch and stare at the wall. Everyone else you worked with regularly is gone now.<br><br>
+    
+    Is the force that's been causing them to vanish going to come for you next?<br><br>
+    
+    What is it? What will it feel like? [[Will it hurt?|day6morning]]
 
 :: day6morning
     Your alarm goes off. You must have fallen asleep at some point, but you don't feel rested at all. You're still here though. [[Time for work.|day6inbox]]
@@ -494,16 +498,22 @@
     [[Do it yourself.|end2]]
 
 :: end2
-    This is an email about sales.<br><br>
+    You open another email.<br><br>
+
+    This one is about sales.<br><br>
 
     [[Do it yourself.|end3]]
 
 :: end3
-    This is an email about tech.<br><br>
+    You open another email<br><br>
+
+    This one is about tech.<br><br>
 
     [[Do it yourself.|end4]]
 
 :: end4
+    You open another email.<br><br>
+
     [[Do it yourself.|end5]]
 
 :: end5
